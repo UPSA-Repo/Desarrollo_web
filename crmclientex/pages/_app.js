@@ -1,0 +1,15 @@
+//Este archivo es el principal del proyecto.
+//Viene creado por defecto _app.js en el directorio pages.
+import {ApolloProvider} from "@apollo/client";
+import client from "../config/apollo";
+
+
+const MyApp = ({ Component, pageProps }) => {
+  return (
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
+  )
+}
+
+export default MyApp
